@@ -27,7 +27,7 @@ class Message(BaseModel):
     timestamp: str
 
 class ChatRequest(BaseModel):
-    messages: List[AnyMessage]
+    messages: List[Message]
 
 class ChatResponse(BaseModel):
     response: str
@@ -41,12 +41,18 @@ async def chat_with_bot(request: ChatRequest):
         # Get only the last user message
         #user_messages = [msg for msg in request.messages if msg.role == "user"]
         messages=request.messages
+        prompt=[]
+        for message in messages:
+            if message.role=="user":
+                prompt.append(HumanMessage(content=message.content))
+            elif message.role=="assistant":
+                prompt.append(AIMessage(content=message.content))
         
         
         try:
             # Create a chat message
             # Generate response
-            response = csv_agent(messages)
+            response = csv_agent(prompt)
             
             # Extract the response text
             #if hasattr(response, 'content'):
