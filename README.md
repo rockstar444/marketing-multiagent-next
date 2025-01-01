@@ -1,6 +1,6 @@
-# AIMarketer - AI-Powered Marketing Intelligence Platform
+#Hermes - AI-Powered Marketing Intelligence Platform
 
-AIMarketer is a sophisticated marketing intelligence platform that leverages advanced multi-agent AI systems to deliver hyper-personalized marketing strategies and insights.
+Hermes is a sophisticated marketing intelligence platform that leverages advanced multi-agent AI systems to deliver hyper-personalized marketing strategies and insights.
 
 ## Features
 
@@ -46,7 +46,7 @@ npm run dev
 ## Project Structure
 
 ```
-ai-marketer/
+hermes/
 ├── app/
 │   ├── (app)/
 │   │   └── dashboard/
