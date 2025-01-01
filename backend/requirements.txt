@@ -1,0 +1,16 @@
+python-pptx
+matplotlib
+pydantic
+langchain
+langchain_google_genai
+langchain_openai
+langchain_groq
+langgraph
+langchain_community
+langchain_experimental
+
+
+fast-api
+uvicorn
+llama-index
+tabulate
