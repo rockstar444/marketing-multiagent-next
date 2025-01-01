@@ -15,7 +15,8 @@ def csv_agent(messages):
     #prompt=system_message+ user_message
     prompt=system_message+messages
     res=agent.invoke(prompt)
-    print(type(res))
+    #print(type(res))
     print(res)
+    return res
 
-
+#csv_agent([HumanMessage(content="create a market segment of high spenders")])
