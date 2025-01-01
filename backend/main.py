@@ -55,11 +55,11 @@ async def chat_with_bot(request: ChatRequest):
              #   response_text = str(response)
             
             # Clean up response
-            response_text = response_text.strip()
-            if not any(response_text.startswith(prefix) for prefix in ['#', 'Here', '**']):
-                response_text = f"Here's your response:\n\n{response_text}"
+            response=response["output"]
+            #if not any(response_text.startswith(prefix) for prefix in ['#', 'Here', '**']):
+             #   response_text = f"Here's your response:\n\n{response_text}"
             
-            return ChatResponse(response=response_text)
+            return ChatResponse(response=response)
             
         except Exception as e:
             print(f"Error generating response: {str(e)}")
